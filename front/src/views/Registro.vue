@@ -59,6 +59,7 @@ export default {
         .post("http://localhost:30000/registro", {
           operando1: this.operando1,
           operando2: this.operando2,
+          nombre: this.nombre,
         })
         .then((response) => {
           this.resultado = response.data.resultado;
