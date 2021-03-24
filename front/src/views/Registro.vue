@@ -27,7 +27,7 @@
           </v-text-field>
 
           <v-btn
-            class="mt-2"
+            class="mt-8"
             justify="center"
             width="80%"
             color="primary"
