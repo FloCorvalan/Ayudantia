@@ -7,7 +7,5 @@ import yo.demo.model.RegistroModel;
 
 @Repository
 public interface RegistroRepository extends MongoRepository<RegistroModel, String>{
-    @Override
-    List<RegistroModel> findAll();
-    RegistroModel findAdminByRut(String rut);
+
 }

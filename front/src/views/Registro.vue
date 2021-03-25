@@ -6,7 +6,7 @@
           <v-card-title class="justify-center"> Calculadora suma </v-card-title>
 
           <v-text-field
-            v-model="nomnbre"
+            v-model="nombre"
             :rules="numberRules"
             label="Nombre"
           ></v-text-field>
@@ -63,8 +63,9 @@ export default {
         })
         .then((response) => {
           this.resultado = response.data.resultado;
+          console.log(this.resultado);
         });
-      console.log(this.resultado);
+      
     },
     save(date) {
       this.$refs.menu.save(date);
