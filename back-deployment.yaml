@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: florenciacorvalan/back
+          image: florencia123/back
           imagePullPolicy: Always
           ports:
             - name: http
