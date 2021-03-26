@@ -1,0 +1,39 @@
+/pruebados/HELP.md
+/pruebados/.gradle
+/pruebados/build/
+!/pruebados/gradle/wrapper/gradle-wrapper.jar
+!/pruebados/**/src/main/**/build/
+!/pruebados/**/src/test/**/build/
+
+### STS ###
+/pruebados/.apt_generated
+/pruebados/.classpath
+/pruebados/.factorypath
+/pruebados/.project
+/pruebados/.settings
+/pruebados/.springBeans
+/pruebados/.sts4-cache
+/pruebados/bin/
+!/pruebados/**/src/main/**/bin/
+!/pruebados/**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+/pruebados/.idea
+/pruebados/*.iws
+/pruebados/*.iml
+/pruebados/*.ipr
+#out/
+!/pruebados/**/src/main/**/out/
+!/pruebados/**/src/test/**/out/
+
+### NetBeans ###
+/pruebados/nbproject/private/
+/pruebados/nbbuild/
+/pruebados/dist/
+/pruebados/nbdist/
+/pruebados/.nb-gradle/
+
+### VS Code ###
+/pruebados/.vscode/
+
+ubuntu-bionic-18.04-cloudimg-console.log
