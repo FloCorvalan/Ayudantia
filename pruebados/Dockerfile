@@ -1,5 +1,7 @@
 FROM openjdk:15.0.1-oracle
 
+COPY . .
+
 RUN chmod +x ./gradlew
 RUN ./gradlew build
 
