@@ -1,6 +1,6 @@
 FROM openjdk:15.0.1-oracle
 
-COPY /out/artifacts/demo_jar/demo.jar demo.jar
+COPY /build/libs/demo-0.0.1-SNAPSHOT.jar demo-0.0.1-SNAPSHOT.jar
 
 COPY docker-entrypoint.sh /
 
