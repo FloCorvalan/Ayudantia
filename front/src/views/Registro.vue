@@ -56,7 +56,7 @@ export default {
   methods: {
     calcularSuma: function () {
       axios
-        .post("http://backend-service.default.svc.cluster.local:30000/registro", {
+        .post("/registro", {
           operando1: this.operando1,
           operando2: this.operando2,
           nombre: this.nombre,

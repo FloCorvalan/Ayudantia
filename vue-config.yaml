@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: vue-config
+data:
+    config.js: |
+        function config () {
+            return { serverAddress: "https://backend-service.default.svc.cluster.local" };
+        }

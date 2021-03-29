@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: prueba-ingress
+spec:
+  rules:
+  - host: mipruebaingress.com
+    http:
+      paths:
+      - path: /
+        backend: 
+          serviceName: frontend-service
+          servicePort: 8080
+      - path: /registro
+        backend: 
+          serviceName: backend-service
+          servicePort: 30000
