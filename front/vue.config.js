@@ -3,12 +3,7 @@ module.exports = {
     'vuetify'
   ],
   devServer: {
-    proxy: {
-      "/": {
-        target: "http://backend-service.default.svc.cluster.local:30000",
-        ws: true,
-        changeOrigin: true
-      }
-    }
+    proxy: 'http://backend-service.default.svc.cluster.local:4000'
+  }
   },
 }
