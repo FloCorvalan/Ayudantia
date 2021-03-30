@@ -1,4 +1,4 @@
-FROM node:lts-alpine
+FROM node:lts-alpine as vue-front
 
 # install simple http server for serving static content
 RUN npm install -g http-server
@@ -21,3 +21,8 @@ RUN npm run build
 EXPOSE 8080
 CMD ["npm", "run", "serve"]
 #CMD ["http-server", "dist" ]
+
+#Para nginx
+FROM nginx:latest
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=vue-front /app/dist /app
