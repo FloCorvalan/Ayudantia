@@ -17,6 +17,9 @@ spec:
       containers:
         - name: frontend
           image: florencia123/front
+          volumeMounts:
+          - name: config-volume
+            mountPath: /app/public/config.js
           imagePullPolicy: Always
           ports:
             - name: http
@@ -32,3 +35,7 @@ spec:
                 configMapKeyRef:
                   name: front-conf 
                   key: port
+      volumes:
+        - name: config-volume
+          configMap:
+            name: vue-config

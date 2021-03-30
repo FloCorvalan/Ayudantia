@@ -42,6 +42,7 @@
   </v-container>
 </template>
 
+<script src="<%= BASE_URL %>config.js"></script>
 <script>
 import axios from "axios";
 export default {
@@ -71,5 +72,9 @@ export default {
       this.$refs.menu.save(date);
     },
   },
+  mounted(){
+    this.back_ip = config.VUE_APP_ENV_BACK_SERVICE_IP
+    this.back.port = config.VUE_APP_ENV_BACK_SERVICE_PORT
+  }
 };
 </script>
