@@ -25,4 +25,4 @@ CMD ["npm", "run", "serve"]
 #Para nginx
 FROM nginx:latest
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=vue-front /app/dist /app
+COPY . /app
