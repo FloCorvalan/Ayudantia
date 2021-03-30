@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+   name: front-conf
+data:
+ ip: backend-service.default.svc.cluster.local
+ port: 30000  

@@ -21,3 +21,14 @@ spec:
           ports:
             - name: http
               containerPort: 8080
+          env:
+            - name: BACK_IP
+              valueFrom:
+                configMapKeyRef:
+                  name: front-conf  
+                  key: ip
+            - name: BACK_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: front-conf 
+                  key: port
