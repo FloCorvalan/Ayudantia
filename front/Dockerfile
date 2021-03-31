@@ -25,5 +25,6 @@ CMD ["npm", "run", "serve"]
 #Para nginx
 FROM nginx:latest
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY . /app
-EXPOSE 8080:8080
+WORKDIR /usr/share/nginx/html
+RUN rm -rf ./*
+COPY --from=vue-front /dist .
