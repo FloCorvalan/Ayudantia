@@ -74,7 +74,7 @@ export default {
   },
   mounted(){
     this.back_ip = config.VUE_APP_ENV_BACK_SERVICE_IP
-    this.back.port = config.VUE_APP_ENV_BACK_SERVICE_PORT
+    this.back_port = config.VUE_APP_ENV_BACK_SERVICE_PORT
   }
 };
 </script>
