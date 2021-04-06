@@ -3,5 +3,6 @@ kind: ConfigMap
 metadata:
    name: front-conf
 data:
-   ip: "backend-service.default.svc.cluster.local"
-   port: "30000"  
+   .env: |
+      VUE_APP_ENV_BACK_SERVICE_IP=backend-service.default.svc.cluster.local
+      VUE_APP_ENV_BACK_SERVICE_PORT=30000 

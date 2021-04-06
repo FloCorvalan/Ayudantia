@@ -14,6 +14,10 @@ spec:
       labels:
         app: frontend
     spec:
+      volumes:
+        - name: front-conf
+          configMap:
+            name: front-conf
       containers:
         - name: frontend
           image: florencia123/front
@@ -21,14 +25,7 @@ spec:
           ports:
             - name: http
               containerPort: 8080
-          env:
-            - name: VUE_APP_ENV_BACK_SERVICE_IP
-              valueFrom: 
-                configMapKeyRef:
-                  name: front-conf
-                  key: ip
-            - name: VUE_APP_ENV_BACK_SERVICE_PORT
-              valueFrom:
-                configMapKeyRef:
-                  name: front-conf
-                  key: port
+          volumeMounts:
+                - name: front-conf
+                  mountPath: /usr/share/nginx/html/.env
+                  subPath: .env
