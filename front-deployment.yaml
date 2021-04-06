@@ -14,10 +14,6 @@ spec:
       labels:
         app: frontend
     spec:
-      volumes:
-        - name: front-conf
-          configMap:
-            name: front-conf
       containers:
         - name: frontend
           image: florencia123/front
@@ -25,7 +21,3 @@ spec:
           ports:
             - name: http
               containerPort: 8080
-          volumeMounts:
-                - name: front-conf
-                  mountPath: /usr/share/nginx/html/.env
-                  subPath: .env

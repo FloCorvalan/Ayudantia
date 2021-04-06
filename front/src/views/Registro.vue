@@ -57,7 +57,7 @@ export default {
   }),
   methods: {
     calcularSuma: function () {
-      console.log(this.ruta)
+      console.log("/registro")
       axios
         .post(this.ruta, {
           operando1: this.operando1,
