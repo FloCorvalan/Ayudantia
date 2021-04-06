@@ -57,7 +57,7 @@ export default {
   methods: {
     calcularSuma: function () {
       axios
-        .post("http://prueba/registro", {
+        .post("http://" + process.env.VUE_APP_ENV_BACK_SERVICE_IP + ":" + process.env.VUE_APP_ENV_BACK_SERVICE_PORT + "/registro", {
           operando1: this.operando1,
           operando2: this.operando2,
           nombre: this.nombre,
