@@ -53,11 +53,13 @@ export default {
     operando2: null,
     numberRules: [],
     resultado: null,
+    ruta: "http://" + process.env.VUE_APP_ENV_BACK_SERVICE_IP + ":" + process.env.VUE_APP_ENV_BACK_SERVICE_PORT + "/registro"
   }),
   methods: {
     calcularSuma: function () {
+      console.log(this.ruta)
       axios
-        .post("http://" + process.env.VUE_APP_ENV_BACK_SERVICE_IP + ":" + process.env.VUE_APP_ENV_BACK_SERVICE_PORT + "/registro", {
+        .post(this.ruta, {
           operando1: this.operando1,
           operando2: this.operando2,
           nombre: this.nombre,
@@ -72,9 +74,5 @@ export default {
       this.$refs.menu.save(date);
     },
   },
-  mounted(){
-    this.back_ip = config.VUE_APP_ENV_BACK_SERVICE_IP
-    this.back_port = config.VUE_APP_ENV_BACK_SERVICE_PORT
-  }
 };
 </script>
