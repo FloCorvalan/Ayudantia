@@ -18,14 +18,16 @@ spec:
       
     spec:
       containers:
-      - image: mongo:latest
+      - image: mongo:2.6
         name: mongo
         
         env:
           - name: MONGO_INITDB_ROOT_USERNAME
             value: test
           - name: MONGO_INITDB_ROOT_PASSWORD
-            value: test123               
+            value: test123  
+          - name: MONGO_INITDB_DB
+            value: prueba             
         ports:
         - containerPort: 27017
           name: mongo                
