@@ -23,11 +23,15 @@ spec:
         
         env:
           - name: MONGO_INITDB_ROOT_USERNAME
-            value: test
+            valueFrom:
+              secretKeyRef:
+                name: mongo-secret
+                key: username
           - name: MONGO_INITDB_ROOT_PASSWORD
-            value: test123  
-          - name: MONGO_INITDB_DATABASE
-            value: prueba             
+            valueFrom:
+              secretKeyRef:
+                name: mongo-secret
+                key: password            
         ports:
         - containerPort: 27017
           name: mongo                

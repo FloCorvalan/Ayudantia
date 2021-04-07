@@ -4,4 +4,4 @@ metadata:
    name: mongo-conf
 data:
    host: mongodb-service
-   database: prueba  
+   database: admin  
