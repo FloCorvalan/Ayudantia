@@ -3,4 +3,5 @@ kind: ConfigMap
 metadata:
    name: mongo-conf
 data:
- database: prueba  
+   host: mongo-service
+   database: prueba  
